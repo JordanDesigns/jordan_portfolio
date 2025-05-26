@@ -287,7 +287,7 @@
       <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
     </div>
 
-    <form id="contactForm" data-sb-form-api-token="" data-sb-temp-token="YOUR_REAL_SB_TOKEN">
+    <form id="contactForm" data-sb-form-api-token="" data-sb-temp-token="16802e90-a419-4146-a23c-e360c4600b3a">
       <!-- Form fields -->
       <div class="row align-items-stretch mb-5">
         <div class="col-md-6">
@@ -733,15 +733,13 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-	    <script>
+<script>
   let captchaPassed = false;
 
   function enableSubmit() {
     captchaPassed = true;
-
     const submitButton = document.getElementById("submitButton");
     submitButton.classList.remove("disabled");
-
     document.getElementById("captchaWarning").classList.add("d-none");
   }
 
@@ -753,12 +751,12 @@
 
     const form = document.getElementById("contactForm");
 
-    // Inject the token right before submitting
-    const token = form.getAttribute("data-sb-temp-token");
-    form.setAttribute("data-sb-form-api-token", token);
+    // Inject token only when hCaptcha is passed
+    const realToken = form.getAttribute("data-sb-temp-token");
+    form.setAttribute("data-sb-form-api-token", realToken);
 
-    // Now manually trigger the form submission
-    form.requestSubmit(); // cleaner than form.submit()
+    // Now trigger the actual submit
+    form.requestSubmit();
   });
 </script>
     </body>
