@@ -13,8 +13,6 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-	<!-- Captcha -->
-		<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -279,67 +277,7 @@
                 </ul>
             </div>
         </section>
-	    <!-- Contact -->
-<section class="page-section" id="contact">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Contact Us</h2>
-      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-    </div>
-
-    <form id="contactForm" data-sb-form-api-token="" data-sb-temp-token="16802e90-a419-4146-a23c-e360c4600b3a">
-      <!-- Form fields -->
-      <div class="row align-items-stretch mb-5">
-        <div class="col-md-6">
-          <div class="form-group mb-4">
-            <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-          </div>
-          <div class="form-group mb-4">
-            <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-          </div>
-          <div class="form-group mb-4">
-            <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group form-group-textarea mb-4 h-100">
-            <textarea class="form-control h-100" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Success message -->
-      <div class="d-none" id="submitSuccessMessage">
-        <div class="text-center text-white mb-3">
-          <div class="fw-bolder">Form submission successful!</div>
-          Thank you for reaching out. We'll get back to you soon.
-        </div>
-      </div>
-
-      <!-- Error message -->
-      <div class="d-none" id="submitErrorMessage">
-        <div class="text-center text-danger mb-3">Error sending message!</div>
-      </div>
-
-      <!-- hCaptcha Widget -->
-      <div class="text-center mb-4">
-        <div class="h-captcha d-inline-block" data-sitekey="30f4a5cc-61ac-4660-8054-57b86820ca36" data-callback="enableSubmit"></div>
-        <div class="text-danger mt-2 d-none" id="captchaWarning">Please verify you're not a robot.</div>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="text-center">
-        <button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="button">Send Message</button>
-      </div>
-    </form>
-  </div>
-</section>
-        <!-- Contact 
+        <!-- Contact -->
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
@@ -347,7 +285,7 @@
                     <h3 class="section-subheading text-muted">Contact for business inquires only.</h3>
                 </div>
                 
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form id="contactForm" data-sb-form-api-token="16802e90-a419-4146-a23c-e360c4600b3a">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -390,7 +328,6 @@
                     <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
                 </form>
             </div><br>
--->
         </section>
         <!-- Footer-->
         <footer class="footer py-4">
@@ -733,31 +670,5 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-<script>
-  let captchaPassed = false;
-
-  function enableSubmit() {
-    captchaPassed = true;
-    const submitButton = document.getElementById("submitButton");
-    submitButton.classList.remove("disabled");
-    document.getElementById("captchaWarning").classList.add("d-none");
-  }
-
-  document.getElementById("submitButton").addEventListener("click", function () {
-    if (!captchaPassed) {
-      document.getElementById("captchaWarning").classList.remove("d-none");
-      return;
-    }
-
-    const form = document.getElementById("contactForm");
-
-    // Inject token only when hCaptcha is passed
-    const realToken = form.getAttribute("data-sb-temp-token");
-    form.setAttribute("data-sb-form-api-token", realToken);
-
-    // Now trigger the actual submit
-    form.requestSubmit();
-  });
-</script>
     </body>
 </html>
