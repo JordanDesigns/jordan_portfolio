@@ -277,7 +277,7 @@
                 </ul>
             </div>
         </section>
-        <!-- Contact -->
+        <!-- Contact
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
@@ -326,6 +326,121 @@
                 </form>
             </div><br>
         </section>
+-->
+
+
+<!-- TESTING -->
+
+<div class="col-lg-7">
+        <h2 class="text-danger fw-bold mb-4">Contact us AND Quote</h2>
+
+        <form id="contactForm" data-sb-form-api-token="16802e90-a419-4146-a23c-e360c4600b3a">
+          <div class="row">
+            <div class="col-md-6 mb-3 form-floating">
+              <input class="form-control" id="firstName" type="text" placeholder="First name" data-sb-validations="required" />
+              <label for="firstName"></label>
+              <div class="invalid-feedback" data-sb-feedback="firstName:required">First name is required.</div>
+            </div>
+            <div class="col-md-6 mb-3 form-floating">
+              <input class="form-control" id="lastName" type="text" placeholder="Last name" data-sb-validations="required" />
+              <label for="lastName"></label>
+              <div class="invalid-feedback" data-sb-feedback="lastName:required">Last name is required.</div>
+            </div>
+            <div class="col-md-6 mb-3 form-floating">
+              <input class="form-control" id="emailAddress" type="email" placeholder="Email" data-sb-validations="required,email" />
+              <label for="emailAddress">Email</label>
+              <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email is required.</div>
+              <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email is not valid.</div>
+            </div>
+            <div class="col-md-6 mb-3 form-floating">
+              <input class="form-control" id="phoneNumber" type="text" placeholder="Phone" />
+              <label for="phoneNumber">Phone</label>
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+            <label for="message">Message</label>
+            <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+          </div>
+
+          <h5 class="text-danger fw-bold mt-4">If you wish a quote, please complete the following</h5>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" id="company" type="text" placeholder="Company" />
+            <label for="company">Company</label>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3 form-floating">
+              <input class="form-control" id="productType" type="text" placeholder="Product Type" />
+              <label for="productType">Banner, vehicle, cards, etc.</label>
+            </div>
+            <div class="col-md-6 mb-3 form-floating">
+              <select class="form-select" id="category" aria-label="Category">
+                <option selected disabled hidden value="">Select category</option>
+                <option>Trade Show Display</option>
+                <option>Wayfinding</option>
+                <option>Window and Wall Graphic</option>
+                <option>Banner</option>
+                <option>Vehicle Wrap</option>
+                <option>Poster</option>
+              </select>
+              <label for="category">Category</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3 form-floating">
+              <input class="form-control" id="artwork" type="text" placeholder="Will you provide art?" />
+              <label for="artwork">Will you provide artwork? (yes/no)</label>
+            </div>
+            <div class="col-md-6 mb-3 form-floating">
+              <input class="form-control" id="design" type="text" placeholder="Do you require design service?" />
+              <label for="design">Do you require design service?</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3 form-floating">
+              <input class="form-control" id="dimensions" type="text" placeholder="Dimensions" />
+              <label for="dimensions">Dimensions</label>
+            </div>
+            <div class="col-md-6 mb-3 form-floating">
+              <input class="form-control" id="deadline" type="text" placeholder="Project Deadline" />
+              <label for="deadline">Project Deadline</label>
+            </div>
+          </div>
+
+          <!-- Success/Fail Messages -->
+          <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">
+              <div class="fw-bolder">Form submission successful!</div>
+              <p>To activate this form, sign up at</p>
+              <a href="https://startbootstrap.com/solution/contact-forms" target="_blank">startbootstrap.com/solution/contact-forms</a>
+            </div>
+          </div>
+          <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">Error sending message!</div>
+          </div>
+
+          <div class="d-grid mt-4">
+            <button class="btn btn-danger btn-lg" id="submitButton" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REQUIRED: SB Forms JavaScript -->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+
+
+
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
